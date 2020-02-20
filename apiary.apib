@@ -1,0 +1,58 @@
+FORMAT: 1A
+HOST: https://security-reva-dev.apiblueprint.org/security/login
+
+# Author : Udayakumar Mathivanan
+# Security API
+
+Security API which allows signup using revature account.
+
+
+
+### [POST] This API will allow a revature user get authenticated with the backend 
+
+
+
++ Request (application/json)
+
+    + Headers
+
+            Content-Type: application/json
+            Content-Length: 99
+            
+        {
+            "userName": "testuser1@revature.com",
+            "password": "MkNvbXBsZXg="
+            
+           
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Content-Type: application/json
+
+    + Body
+
+            {
+                 "primaryLocation": "Reston-VA",
+                 "statusCode" : 200,
+                 "description" :"Authentication successful"
+                 "currentSystemRole" : {"id" : 1,"code" : "SR000","description" : "Super Admin","name" : "Super Admin" }
+                 "loginToken" : "LOGIN_TOKEN"
+            }
+            
++ Response 401 (application/json)
+
+    + Headers
+
+            Content-Type: application/json
+
+    + Body
+
+            {
+            
+                 "statusCode" : 401,
+                 "description" :"UnAuthorized or Invalid Credentials
+               
+            }
