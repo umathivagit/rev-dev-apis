@@ -356,3 +356,58 @@ CoreData API contains multiple endpoints which enables core operations
               ]
 
             }
+            
+### GET /coredata/skills
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+
+            {
+             "statusCode" : 200,
+             "description" : "Authentication successful",
+             "skills": 
+            [
+    
+              {
+                "id": "SK001",
+                "name": "JAVA",
+                "score": "5"
+              },
+              {
+                "id": "SK002",
+                "name": ".NET",
+                "score": "7"
+              },
+              {
+                "id": "SK003",
+                "name": "AWS",
+                "score": "10"
+              },
+              {
+                "id": "SK004",
+                "name": "PEGA",
+                "score": "9"
+               
+              },
+              {
+                "id": "SK006",
+                "name": "FullStack",
+                "score": "8"
+                
+              },
+              
+            ]
+            
+            }
