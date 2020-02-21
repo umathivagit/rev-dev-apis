@@ -9,6 +9,19 @@ Security API which allows signup using revature account. This API will allow a r
 
 ### POST /security/login 
 
++ Request (application/json)
+
+    + Headers
+
+            
+            Content-Length: 99
+   
+    + Body
+    
+            {
+                "userName": "testuser1@revature.com",
+                "password": "MkNvbXBsZXg="
+            }
 
 + Response 201 (application/json)
 
@@ -23,7 +36,7 @@ Security API which allows signup using revature account. This API will allow a r
                  "statusCode" : 200,
                  "description" : "Authentication successful",
                  "currentSystemRole" : {"id" : 1,"code" : "SR000","description" : "Super Admin","name" : "Super Admin" },
-                 "loginToken" : "LOGIN_TOKEN"
+                 "loginToken" : "570284df-caa6-460c-bc13-cbbdac6e8149"
             }
             
 + Response 401 (application/json)
