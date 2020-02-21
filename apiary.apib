@@ -411,3 +411,53 @@ CoreData API contains multiple endpoints which enables core operations
             ]
             
             }
+            
+### GET /coredata/maintenance/tasks
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+    
+            {
+             "statusCode" : 200,
+             "description" : "Authentication successful",
+             "tasks": 
+            [
+    
+              {
+                "id": "TA001",
+                "name": "Arrange Desk"
+              },
+              {
+                "id": "TA003",
+                "name": "Wipe Desks"
+              },
+              {
+                "id": "TA004",
+                "name": "Clean Desks"
+              },
+              {
+                "id": "TA005",
+                "name": "Clean Whiteboards"
+               
+              },
+              {
+                "id": "TA006",
+                "name": "Arrange Chairs"
+                
+              },
+              
+            ]
+            
+            }
