@@ -2,9 +2,9 @@ FORMAT: 1A
 HOST: /security/login
 
 # Author : Udayakumar Mathivanan
-# Security API
+# CoreData API
 
-Security API which allows signup using revature account. This API will allow a revature user get authenticated with the backend
+CoreData API contains multiple endpoints which enables core operations
 
 
 ### POST /security/login 
@@ -53,7 +53,6 @@ Security API which allows signup using revature account. This API will allow a r
                
             }
             
-
 ### GET /coredata/location?type=training
 
 + Request (application/json)
@@ -78,45 +77,165 @@ Security API which allows signup using revature account. This API will allow a r
             
             
               {
+                "id": "LOC001",
                 "state": "FL",
                 "campus": "UTA",
                 "building": "Other"
               },
               {
+                "id": "LOC002",
                 "state": "FL",
                 "campus": "USF",
                 "building": "NEC"
               },
               {
+                "id": "LOC003",
                 "state": "FL",
                 "campus": "USF",
                 "building": "BSN”
               },
               {
+                "id": "LOC004",
                 "state": "VA”,
                 "campus": "Reston",
                 "building": "Headquarters"
               },
               {
+                "id": "LOC005",
                 "state": "NY”,
                 "campus": "New York",
                 "building": "NY"
               },
               {
+                "id": "LOC006",
                 "state": "TX”,
                 "campus": "Dallas",
                 "building": "TX"
               },
               {
+                "id": "LOC007",
                 "state": "West Virginia",
                 "campus": "Morgantown",
                 "building": "Other"
               },
               {
+                "id": "LOC008",
                 "state": "West Virginia",
                 "campus": "Morgantown",
                 "building": "Other"
               }
+            ]
+            
+            }
+### GET /coredata/room?type=training
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer "570284df-caa6-460c-bc13-cbbdac6e8149"
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+
+            {
+             "statusCode" : 200,
+             "description" : "Authentication successful"
+            [
+            
+            
+              {
+                "id": "CA001",
+                "campus": "FL-UTA"
+                
+              },
+              {
+                "id": "CA002",
+                "campus": "FL-USF"
+               
+              },
+              {
+                "id": "CA003",
+                "campus": "FL-BSN"
+                
+              },
+              {
+                "id": "CA004”,
+                "campus": "VA-Reston"
+               
+              },
+              {
+                "id": "CA005”,
+                "campus": "NY-New York"
+              
+              },
+              {
+                "id": "CA006”,
+                "campus": "TX-Dallas"
+               
+              }
+              
+            ],
+            [
+            
+            
+              {
+                "id": "FL-USF-RR001",
+                "room": "107",
+                "capacity": 48
+                
+              },
+              {
+                "id": "FL-USF-RR002",
+                "room": "200",
+                "capacity": 45
+               
+              },
+              {
+                "id": "FL-USF-RR003",
+                "room": "300",
+                "capacity": 62
+                
+              },
+              {
+                "id": "FL-USF-RR004”,
+                "room": "300A",
+                "capacity": 64
+               
+              },
+              {
+                "id": "FL-BSN-RR001”,
+                "room": "117",
+                "capacity": 65
+              
+              },
+              {
+                "id": "VA-RES-RR001”,
+                "room": "14",
+                "capacity": 25
+               
+              }
+              ,
+              {
+                "id": "VA-RES-RR002”,
+                "room": "15",
+                "capacity": 30
+               
+              }
+              ,
+              {
+                "id": "VA-RES-RR003”,
+                "room": "16",
+                "capacity": 50
+               
+              }
+              
             ]
             
             }
