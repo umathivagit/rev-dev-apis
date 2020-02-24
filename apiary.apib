@@ -462,3 +462,37 @@ CoreData API contains multiple endpoints which enables core operations
             ]
             
             }
+ 
+            
+
+ 
+### GET /coredata/training/batch
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+    
+            {
+                "statusCode" : 200,
+                "description" : "Data Retrieval Success",
+                "batchInfo" : [ {
+                "id" : "BA001",
+                "name" : "Test Batch",
+                "startDate" : "2020-02-19T12:13:55.904",
+                "endDate" : "2020-02-19T12:13:55.904",
+                "createdById" : "TR009",
+                "modifiedById" : "TR005",
+                "inchargeId" : "TR005"
+                } ]
+            }
