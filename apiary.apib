@@ -592,7 +592,7 @@ CoreData API contains multiple endpoints which enables core operations
     
             {
              "statusCode" : 200,
-             "description" : "Authentication successful",
+             "description" : "Data Retrieval Success",
              "tasks": 
             [
     
@@ -635,7 +635,7 @@ CoreData API contains multiple endpoints which enables core operations
     
             {
              "statusCode" : 200,
-             "description" : "Authentication successful",
+             "description" : "Data Retrieval Success",
              "tasks": 
             [
     
@@ -660,6 +660,91 @@ CoreData API contains multiple endpoints which enables core operations
                 "id": "TA006",
                 "name": "Arrange Chairs"
                 
+              }
+              
+            ]
+            
+            }
+            
+
+### GET /coredata/maintenance/room/tasks/FL-BSN-RR001
+ 
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+    
+            {
+             "statusCode" : 200,
+             "description" : "Data Retrieval Success",
+             "tasks": 
+            [
+    
+              {
+                "id": "TA001",
+                "name": "Arrange Desk"
+              },
+              {
+                "id": "TA003",
+                "name": "Wipe Desks"
+              },
+              {
+                "id": "TA004",
+                "name": "Clean Desks"
+              }
+              
+            ]
+            
+            }
+            
+            
+
+### GET /coredata/maintenance/room/tasks/VA-RES-RR001
+ 
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+    
+            {
+             "statusCode" : 200,
+             "description" : "Data Retrieval Success",
+             "tasks": 
+            [
+    
+              {
+                "id": "TA001",
+                "name": "Arrange Desk"
+              },
+              {
+                "id": "TA003",
+                "name": "Wipe Desks"
+              },
+              {
+                "id": "TA004",
+                "name": "Clean Desks"
               }
               
             ]
