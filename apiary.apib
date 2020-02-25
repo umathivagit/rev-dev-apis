@@ -7,6 +7,55 @@ HOST: /security/login
 CoreData API contains multiple endpoints which enables core operations
 
 
+### POST /security/login/info
+
++ Request (application/json)
+
+    + Headers
+
+            Content-Length: 99
+   
+    + Body
+
+            {
+                "userName": "testuser1@revature.com",
+                "password": "dsh27282j=="
+            }
+         
++ Response 201 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+
+            {
+                 "primaryLocation": "Reston-VA",
+                 "statusCode" : 201,
+                 "description" : "Authentication successful",
+                 "currentSystemRole" : {"id" : 1,"code" : "SR000","description" : "Super Admin","name" : "Super Admin" },
+                 "loginToken" : "570284df-caa6-460c-bc13-cbbdac6e8149",
+                 "emp_id" : "TR009"
+                 
+            }
+            
++ Response 401 (application/json)
+
+    + Headers
+
+              Accept-Language: en
+
+    + Body
+
+            {
+            
+                 "statusCode" : 401,
+                 "description" :"UnAuthorized or Invalid Credentials
+               
+            }
+            
+            
 ### POST /security/login 
 
 + Request (application/json)
@@ -36,6 +85,7 @@ CoreData API contains multiple endpoints which enables core operations
                  "description" : "Authentication successful",
                  "currentSystemRole" : {"id" : 1,"code" : "SR000","description" : "Super Admin","name" : "Super Admin" },
                  "loginToken" : "570284df-caa6-460c-bc13-cbbdac6e8149"
+                 
             }
             
 + Response 401 (application/json)
@@ -457,7 +507,7 @@ CoreData API contains multiple endpoints which enables core operations
                 "id": "TA006",
                 "name": "Arrange Chairs"
                 
-              },
+              }
               
             ]
             
@@ -516,4 +566,101 @@ CoreData API contains multiple endpoints which enables core operations
                 
                 
                 ]
+            }
+            
+            
+
+### GET /coredata/maintenance/room/tasks/FL-USF-RR001
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+    
+            {
+             "statusCode" : 200,
+             "description" : "Authentication successful",
+             "tasks": 
+            [
+    
+              {
+                "id": "TA001",
+                "name": "Arrange Desk"
+              },
+              {
+                "id": "TA003",
+                "name": "Wipe Desks"
+              },
+              {
+                "id": "TA004",
+                "name": "Clean Desks"
+              }
+              
+              
+            ]
+            
+            }
+ 
+ 
+
+ 
+### GET /coredata/maintenance/room/tasks/FL-USF-RR002
+ 
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+    
+            {
+             "statusCode" : 200,
+             "description" : "Authentication successful",
+             "tasks": 
+            [
+    
+              {
+                "id": "TA001",
+                "name": "Arrange Desk"
+              },
+              {
+                "id": "TA003",
+                "name": "Wipe Desks"
+              },
+              {
+                "id": "TA004",
+                "name": "Clean Desks"
+              },
+              {
+                "id": "TA005",
+                "name": "Clean Whiteboards"
+               
+              },
+              {
+                "id": "TA006",
+                "name": "Arrange Chairs"
+                
+              }
+              
+            ]
+            
             }
