@@ -292,6 +292,147 @@ CoreData API contains multiple endpoints which enables core operations
             
             }
             
+            
+### GET /coredata/batch/room?type=training
+
++ Request (application/json)
+
+    + Headers
+        
+            Authorization: Bearer 570284df-caa6-460c-bc13-cbbdac6e8149
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Accept-Language: en
+
+    + Body
+
+            {
+             "statusCode" : 200,
+             "description" : "Authentication successful",
+             "allcampus": 
+             [
+            
+            
+              {
+                "id": "CA001",
+                "campus": "FL-UTA"
+                
+              },
+              {
+                "id": "CA002",
+                "campus": "FL-USF"
+               
+              },
+              {
+                "id": "CA003",
+                "campus": "FL-BSN"
+                
+              },
+              {
+                "id": "CA004",
+                "campus": "VA-Reston"
+               
+              },
+              {
+                "id": "CA005",
+                "campus": "NY-New York"
+              
+              },
+              {
+                "id": "CA006",
+                "campus": "TX-Dallas"
+               
+              }
+              
+            ],
+            "allrooms": 
+            [
+            
+            
+              {
+                "id": "FL-USF-RR001",
+                "room": "107",
+                "capacity": 48,
+                "batch_name": "Free",
+                "trainer_name": "N/A",
+                "status": 0
+              
+                
+              },
+              {
+                "id": "FL-USF-RR002",
+                "room": "200",
+                "capacity": 45,
+                "batch_name": "JAN27th-android-USF-Batch-mayur",
+                "trainer_name": "Udayakumar Mathivanan",
+                "status": 1
+               
+              },
+              {
+                "id": "FL-USF-RR003",
+                "room": "300",
+                "capacity": 62,
+                "batch_name": "JAN27th-iOS-USF-Batch-uday",
+                "trainer_name": "Udayakumar Mathivanan",
+                "status": 1
+              
+                
+              },
+              {
+                "id": "FL-USF-RR004",
+                "room": "300A",
+                "capacity": 64,
+                "batch_name": "FEB10th-JAVA-USF-Batch-mitch",
+                "trainer_name": "Mitch Goshorn",
+                "status": 1
+               
+              },
+              {
+                "id": "FL-BSN-RR001",
+                "room": "117",
+                "capacity": 65,
+                "batch_name": "Free",
+                "trainer_name": "NA",
+                "status": 0
+              
+              },
+              {
+                "id": "VA-RES-RR001",
+                "room": "14",
+                "capacity": 25,
+                "batch_name": "Free",
+                "trainer_name": "NA",
+                "status": 0
+               
+              }
+              ,
+              {
+                "id": "VA-RES-RR002",
+                "room": "15",
+                "capacity": 30
+                "batch_name": "Free",
+                "trainer_name": "NA",
+                "status": 0
+               
+              }
+              ,
+              {
+                "id": "VA-RES-RR003",
+                "room": "16",
+                "capacity": 50,
+                "batch_name": "Free",
+                "trainer_name": "NA",
+                "status": 0
+               
+              }
+              
+            ]
+            
+            }
 ### GET /coredata/trainers
 
 + Request (application/json)
